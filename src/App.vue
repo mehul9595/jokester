@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-   Got jokes?
-   {{$store.state}}
+    <h3>Got jokes?</h3>
+    <div class>
+      <button class="btn btn-primary" @click="initJokes">Add Random Jokes</button>
+      {{$store.state}}
+    </div>
   </div>
 </template>
 
 <script>
-
+import { mapActions } from "vuex";
 
 export default {
-  name: 'App',
-  components: {
-
-  }
-}
+  name: "App",
+  methods: mapActions(['initJokes'])
+};
 </script>
 
 <style>
