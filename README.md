@@ -1,5 +1,8 @@
 # jokester
 
+State management in Vuejs using Vuex. 
+This project is build using vue create default babel + eslint options.
+
 ## Project setup
 ```
 npm install
