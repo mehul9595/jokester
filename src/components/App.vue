@@ -6,13 +6,21 @@
       <button class="btn btn-primary" @click="addJoke">Add a Joke</button>
     </div>
     <br />
+    <!-- filtering for jokes -->
+    <span v-for="(type, idx) in types" :key="idx">
+      <input type="checkbox" :value="type" checked v-model="checkedTypes" />
+      <label>{{type}}</label>&nbsp;&nbsp;&nbsp;
+    </span>
     <br />
     <br />
     <div class="col-md-12">
-      <Joke v-for="(joke, idx) in $store.state.jokes" 
-      :joke="joke" 
-      :index="idx"
-      :key="idx" />
+      <Joke
+        v-for="(joke, idx) in $store.state.jokes"
+        :joke="joke"
+        :index="idx"
+        :key="idx"
+        v-show="checkedTypes.includes(joke.type)"
+      />
     </div>
   </div>
 </template>
@@ -23,6 +31,12 @@ import Joke from "./Joke.vue";
 
 export default {
   name: "App",
+  data() {
+    return {
+      types: ["general", "knock-knock", "programming"],
+      checkedTypes: ["general", "knock-knock", "programming"]
+    };
+  },
   methods: mapActions(["initJokes", "addJoke"]),
   components: {
     Joke
@@ -40,8 +54,7 @@ export default {
   margin-top: 60px;
 }
 
-.btn {
+.btn, label {
   margin: 0 5px;
 }
-
 </style>
