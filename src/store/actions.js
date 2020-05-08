@@ -5,3 +5,14 @@ export const initJokes = ({commit})=>{
         .then(response => response.json())
         .then(json => commit(types.INIT_JOKES, json));
 }
+
+export const addJoke = ({commit}) => {
+    fetch('https://official-joke-api.appspot.com/jokes/random', {method: 'GET'})
+        .then(response => response.json() )
+        .then(json => commit(types.ADD_JOKE, json));
+}
+
+export const removeJoke = ({commit}, index) => {
+    commit(types.REMOVE_JOKE, index);
+    console.log('removing id:' + index);
+}
