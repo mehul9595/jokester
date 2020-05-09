@@ -1,10 +1,9 @@
 # jokester
 
-State management in Vuejs using Vuex. 
+State management in Vuejs using Vuex.
 This project is build using vue create default babel + eslint options.
 
-This repo is built as a part of learning session on Udemy (https://www.udemy.com/course/vue-web-apps/learn/lecture/6806102#overview)
-
+This repo is built as a part of learning session on Udemy (<https://www.udemy.com/course/vue-web-apps/learn/lecture/6806102#overview)>
 
 Vuex main components are Store, Mutations, and Actions.
 
@@ -14,8 +13,8 @@ Mutations represent the only way to modify and update the store. Having these st
 
 Actions resemble mutations, but differ in that they commit mutations. Actions are callable by other functions in order to signal a mutation to fire and update the store.
 
-
 ## Project setup
+
 ```
 npm install
 ```
