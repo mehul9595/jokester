@@ -3,6 +3,9 @@
 State management in Vuejs using Vuex. 
 This project is build using vue create default babel + eslint options.
 
+This repo is built as a part of learning session on Udemy (https://www.udemy.com/course/vue-web-apps/learn/lecture/6806102#overview)
+
+
 Vuex main components are Store, Mutations, and Actions.
 
 The Store refers to the centralized object for the entire application that gives state to every component.
